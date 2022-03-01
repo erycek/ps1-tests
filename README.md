@@ -13,6 +13,12 @@ to directory
 tests
 ```
 
+create directory
+```
+bin
+```
+for output files
+
 ### Example Structrue
 ![example_structure](image.png)
 
