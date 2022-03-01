@@ -103,7 +103,7 @@ void playfair_encrypt_long_text()
     for(int i = 0; i < 24; i++)
     {
         char* encrypted = playfair_encrypt(long_key[i], long_text[i]);
-        assert(strcmp(encrypted, short_text_output[i]) == 0);
+        assert(strcmp(encrypted, long_text_output[i]) == 0);
         free(encrypted);
     }
 
