@@ -75,7 +75,7 @@ void playfair_encrypt_short_text()
     for(int i = 0; i < 40; i++)
     {
         char* encrypted = playfair_encrypt(short_key[i], short_text[i]);
-        assert(encrypted == short_text_output[i]);
+        assert(strcmp(encrypted, short_text_output[i]) == 0);
         free(encrypted);
     }
 
@@ -89,7 +89,7 @@ void playfair_decrypt_short_text()
     for(int i = 0; i < 40; i++)
     {
         char* decrypted = playfair_decrypt(short_key[i], short_text_output[i]);
-        assert(decrypted == short_text[i]);
+        assert(strcmp(decrypted, short_text[i]) == 0);
         free(decrypted);
     }
 
@@ -103,7 +103,7 @@ void playfair_encrypt_long_text()
     for(int i = 0; i < 24; i++)
     {
         char* encrypted = playfair_encrypt(long_key[i], long_text[i]);
-        assert(encrypted == short_text_output[i]);
+        assert(strcmp(encrypted, short_text_output[i]) == 0);
         free(encrypted);
     }
 
@@ -117,7 +117,7 @@ void playfair_decrypt_long_text()
     for(int i = 0; i < 24; i++)
     {
         char* decrypted = playfair_decrypt(long_key[i], long_text_output[i]);
-        assert(decrypted == long_text[i]);
+        assert(strcmp(decrypted, long_text[i]) == 0);
         free(decrypted);
     }
 
